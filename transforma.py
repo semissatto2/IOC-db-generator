@@ -51,21 +51,22 @@ escreve_cabecario(nome_comunicacao[0])
 
 for line in arquivo_entrada:
 
-        if line == "\n":
+        if line == "\r\n":
 		flag_transicao = 1
 		porta += 1 
 
 	if flag_transicao != 1:
 		campos = line.split(";")
+		print campos
 		nome_da_variavel = campos[0]
 		tipo_da_variavel = campos[1]
 		
-		if tipo_da_variavel == "Real\n":
+		if tipo_da_variavel == "Real\r\n":
 				escreve_record_ai(nome_da_variavel, nome_comunicacao[porta], offset[porta], "REAL32")				
 				offset[porta] += 4
 				tamanho_total[porta] += 4
 				
-		if tipo_da_variavel == "Bool\n":
+		if tipo_da_variavel == "Bool\r\n":
 				escreve_record_bi(nome_da_variavel, nome_comunicacao[porta], offset[porta], numero_bits, "BYTE")								
 				numero_bits = numero_bits + 1				
 				if numero_bits == 8:
