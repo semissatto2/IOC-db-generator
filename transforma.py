@@ -51,7 +51,7 @@ def escreve_record_ai(nome_da_variavel, PLC_name, offset, _type):
 def escreve_record_bi(nome_da_variavel, PLC_name, bit, offset, _type):
 	INP_field = '"@%s/%d B=%d T=%s"' %(PLC_name, bit, offset, _type)
 	bi_field = '"$(P)$(R)%s"' %(nome_da_variavel)
-	arquivo_saida.write("\nrecord (bi, %s) {\n	field (SCAN, %s)\n	field (DTYP, %s)\n	field (INP, %s)\n}\n" %(bi_field, nome_da_variavel, SCAN_field, DTYP_field, INP_field))
+	arquivo_saida.write("\nrecord (bi, %s) {\n	field (SCAN, %s)\n	field (DTYP, %s)\n	field (INP, %s)\n}\n" %(bi_field, SCAN_field, DTYP_field, INP_field))
 
 
 escreve_cabecario(nome_comunicacao[0])
