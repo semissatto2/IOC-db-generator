@@ -67,7 +67,7 @@ for line in arquivo_entrada:
 		campos = line.split(";")
 		print campos
 		nome_da_variavel = campos[0]
-		tipo_da_variavel = campos[3]
+		tipo_da_variavel = campos[2]
 		
 		if tipo_da_variavel == "Real\r\n":
 				escreve_record_ai(nome_da_variavel, nome_comunicacao[porta], offset[porta], "REAL32")				
