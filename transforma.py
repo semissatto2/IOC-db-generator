@@ -27,24 +27,31 @@ def escreve_cabecario(PLC_name):
 	ZSV_field = '"MAJOR"'
 	DTYP_field_cab = '"S7plc stat"'
 	FLNK_field = '"$(P)$(R)status-counter"'	
-	arquivo_saida.write("record (bi, $(P)$(R)status) {\n	field (DTYP, %s)\n	field (INP, %s)\n	field (SCAN, %s)\n	field (ZNAM, %s)\n	field (ONAM, %s)\n	field (ZSV, %s)\n	field(FLNK, %s)\n}\n" %(DTYP_field_cab, INP_field_cab, SCAN_field, ZNAM_field, ONAM_field, ZSV_field, FLNK_field))
+	bi_field = '"$(P)$(R)status"'
+	arquivo_saida.write("record (bi, %s) {\n	field (DTYP, %s)\n	field (INP, %s)\n	field (SCAN, %s)\n	field (ZNAM, %s)\n	field (ONAM, %s)\n	field (ZSV, %s)\n	field(FLNK, %s)\n}\n" %(bi_field, DTYP_field_cab, INP_field_cab, SCAN_field, ZNAM_field, ONAM_field, ZSV_field, FLNK_field))
 	
 	CALC_field = '"A+1"'
 	FNLK_field = '"$(P)$(R)disconnect-counter"'
-	arquivo_saida.write("record (calc, $(P)$(R)status-counter) {\n	field (INPA, $(P)$(R)status-counter)\n	field (CALC, %s)\n	field (FLNK, %s)\n}\n" %(CALC_field, FNLK_field))
+	record_calc_field = '"$(P)$(R)status-counter"'
+	INPA_field = '"$(P)$(R)status-counter"'
+	arquivo_saida.write("record (calc, %s) {\n	field (INPA, %s)\n	field (CALC, %s)\n	field (FLNK, %s)\n}\n" %(record_calc_field, INPA_field, CALC_field, FNLK_field))
 	
+	INPA_field = '"$(P)$(R)status"'
 	INPB_field = '"$(P)$(R)disconnect-counter.LA"'
 	INPC_field = '"$(P)$(R)disconnect-counter"'
-	CALC_field = '"(A=0&&B=1)?C+1:C"'	
-	arquivo_saida.write("record (calc, $(P)$(R)disconnect-counter) {\n	field (INPA, $(P)$(R)status)\n	field (INPB, %s)\n	field (INPC, %s)\n	field (CALC, %s)\n}\n" %(INPB_field, INPC_field, CALC_field))
+	CALC_field = '"(A=0&&B=1)?C+1:C"'
+	calc_field = '"$(P)$(R)disconnect-counter"'
+	arquivo_saida.write("record (calc, %s) {\n	field (INPA, %s)\n	field (INPB, %s)\n	field (INPC, %s)\n	field (CALC, %s)\n}\n" %(calc_field, INPA_field, INPB_field, INPC_field, CALC_field))
 
 def escreve_record_ai(nome_da_variavel, PLC_name, offset, _type):
 	INP_field = '"@%s/%d T=%s"' %(PLC_name, offset, _type)
-	arquivo_saida.write("\nrecord (ai, $(P)$(R)%s) {\n	field (SCAN, %s)\n	field (DTYP, %s)\n	field (INP, %s)\n}\n" %(nome_da_variavel, SCAN_field, DTYP_field, INP_field))
+	ai_field = '"$(P)$(R)%s"' %(nome_da_variavel)
+	arquivo_saida.write("\nrecord (ai, %s) {\n	field (SCAN, %s)\n	field (DTYP, %s)\n	field (INP, %s)\n}\n" %(ai_field, SCAN_field, DTYP_field, INP_field))
 
 def escreve_record_bi(nome_da_variavel, PLC_name, bit, offset, _type):
 	INP_field = '"@%s/%d B=%d T=%s"' %(PLC_name, bit, offset, _type)
-	arquivo_saida.write("\nrecord (bi, $(P)$(R)%s) {\n	field (SCAN, %s)\n	field (DTYP, %s)\n	field (INP, %s)\n}\n" %(nome_da_variavel, SCAN_field, DTYP_field, INP_field))
+	bi_field = '"$(P)$(R)%s"' %(nome_da_variavel)
+	arquivo_saida.write("\nrecord (bi, %s) {\n	field (SCAN, %s)\n	field (DTYP, %s)\n	field (INP, %s)\n}\n" %(bi_field, nome_da_variavel, SCAN_field, DTYP_field, INP_field))
 
 
 escreve_cabecario(nome_comunicacao[0])
