@@ -76,7 +76,7 @@ for line in arquivo_entrada:
 		if tipo_da_variavel == "Bool\r\n":
 				escreve_record_bi(nome_da_variavel, nome_comunicacao[porta], offset[porta], numero_bits[porta], "BYTE")								
 				numero_bits[porta] = numero_bits[porta] + 1				
-				if numero_bits == 8:
+				if numero_bits[porta] == 8:
 					offset[porta] += 1
 					tamanho_total[porta] += 1
 					numero_bits[porta] = 0	
