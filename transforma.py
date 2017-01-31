@@ -69,6 +69,7 @@ for line in arquivo_entrada:
 		nome_da_variavel = campos[0]
 		tipo_da_variavel = campos[2]
 		
+		
 		if tipo_da_variavel == "Real\r\n":
 				escreve_record_ai(nome_da_variavel, nome_comunicacao[porta], offset[porta], "REAL32")				
 				offset[porta] += 4
