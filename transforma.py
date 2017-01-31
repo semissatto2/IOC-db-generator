@@ -16,7 +16,7 @@ DTYP_field = '"S7plc"'
 
 flag_transicao = 0
 offset = [0]*2
-numero_bits = 0
+numero_bits = [0]*2
 tamanho_total = [0]*2
 porta = 0
 	
@@ -74,12 +74,12 @@ for line in arquivo_entrada:
 				tamanho_total[porta] += 4
 				
 		if tipo_da_variavel == "Bool\r\n":
-				escreve_record_bi(nome_da_variavel, nome_comunicacao[porta], offset[porta], numero_bits, "BYTE")								
-				numero_bits = numero_bits + 1				
+				escreve_record_bi(nome_da_variavel, nome_comunicacao[porta], offset[porta], numero_bits[porta], "BYTE")								
+				numero_bits[porta] = numero_bits[porta] + 1				
 				if numero_bits == 8:
 					offset[porta] += 1
 					tamanho_total[porta] += 1
-					numero_bits = 0	
+					numero_bits[porta] = 0	
 
 		
 	flag_transicao = 0
