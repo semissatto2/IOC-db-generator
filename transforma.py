@@ -60,7 +60,7 @@ escreve_cabecario(nome_comunicacao[0])
 
 for line in arquivo_entrada:
 
-        if line == "\r\n":
+        if line == "***\r\n":
 		flag_transicao = 1
 		porta += 1
 		numero_bits[porta] = 0
