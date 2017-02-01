@@ -5,12 +5,14 @@ try:
 	file_in = str(sys.argv[1])
 	file_out = str(sys.argv[2])
 	arquivo_entrada = open(file_in, 'r')
-	arquivo_saida = open(file_out, 'a')
+	arquivo_saida = open(file_out, 'w')
 except IndexError:
 	print "Argumentos invalidos. Execute $python .py (arquivo de entrada) (arquivo de saida)"
 	sys.exit()
 
-nome_comunicacao = ("Testsystem1:0","Testesystem2:0")
+nome_comunicacao = ("Testsystem:0","Testsystem_alarms:0") #Edite aqui com os nomes configurados em s7plcConfigure
+
+
 SCAN_field = '"I/O Intr"'
 DTYP_field = '"S7plc"'
 
@@ -69,7 +71,11 @@ for line in arquivo_entrada:
 		nome_da_variavel = campos[0]
 		tipo_da_variavel = campos[2]
 		
-		
+		if tipo_da_variavel == "Word\r\n":
+				escreve_record_ai(nome_da_variavel, nome_comunicacao[porta], offset[porta], "WORD")
+				offset[porta] += 2
+				tamanho_total[porta] +=2
+ 
 		if tipo_da_variavel == "Real\r\n":
 				escreve_record_ai(nome_da_variavel, nome_comunicacao[porta], offset[porta], "REAL32")				
 				offset[porta] += 4
