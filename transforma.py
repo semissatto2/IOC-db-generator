@@ -66,7 +66,7 @@ for line in arquivo_entrada:
 		numero_bits[porta] = 0
 
 	if flag_transicao != 1:
-		campos = line.split(";")
+		campos = line.split(",")
 		print campos
 		nome_da_variavel = campos[0]
 		tipo_da_variavel = campos[2]
