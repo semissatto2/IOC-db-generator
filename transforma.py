@@ -21,6 +21,7 @@ offset = [0]*2
 numero_bits = [0]*2
 tamanho_total = [0]*2
 porta = 0
+cat_da_variavel_antiga = ""
 	
 def escreve_cabecario(PLC_name):
 	INP_field_cab = '"@%s"' %(PLC_name)	
@@ -66,10 +67,15 @@ for line in arquivo_entrada:
 		numero_bits[porta] = 0
 
 	if flag_transicao != 1:
+		cat_da_variavel_antiga = cat_da_variavel_atual
 		campos = line.split(",")
 		print campos
 		nome_da_variavel = campos[0]
 		tipo_da_variavel = campos[2]
+		cat_da_variavel_atual = campos[1]
+		
+		if cat_da_variavel_atual != cat_da_variavel_antiga && cat_da_variavel_antiga != "":
+			print "Houve transicao de categoria
 		
 		if tipo_da_variavel == "Word\r\n":
 				escreve_record_ai(nome_da_variavel, nome_comunicacao[porta], offset[porta], "WORD")
