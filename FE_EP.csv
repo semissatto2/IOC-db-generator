@@ -78,7 +78,7 @@ A_FOE_VAC_FV1,LI,Bool
 A_UTL_WRT_SV,LI,Bool
 A_UTL_WPT_SV,LI,Bool
 Fail_reset,LI,Bool
- I_MP (S13),LI,Bool
+I_MP(S13),LI,Bool
 EMA+FOE-UTL-CAR-PIT,LO,Bool
 EMA+FOE-UTL-WPR-FIT,LO,Bool
 EMA+FOE-UTL-WPR-PIT,LO,Bool
@@ -125,7 +125,7 @@ I_Water_Temp_OK,HMI,Bool
 Beam_Simulation_BS,HMI,Bool
 Beam_Simulation_AS,HMI,Bool
 I_Gate_Valves,HMI,Bool
-NOT_ FAIL_CONDITION,FLG,Bool
+NOT_FAIL_CONDITION,FLG,Bool
 ***
 OFFS_AI_EMA+FOE-UTL-WPR-TT,AI_OFS,Real
 OFFS_AI_EMA+FOE-UTL-WRT-TT,AI_OFS,Real
@@ -226,7 +226,7 @@ GV_ER_to_O_EMA+FOE-VAC-GV6,GER,Bool
 GV_ER_to_C_EMA+FOE-VAC-GV6,GER,Bool
 GV_ER_M_W_CEMA+FOE-VAC-GV6,GER,Bool
 GV_ER_SCEMA+FOE-VAC-GV6,GER,Bool
-GV failure,ERR,Bool
+GV_failure,ERR,Bool
 ER_I_Water_PaR_Flow_OK,ERR,Bool
 ER_I_Utilities_OK,ERR,Bool
 ER_I_Water_Flow_OK,ERR,Bool
