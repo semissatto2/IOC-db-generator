@@ -1,0 +1,1700 @@
+record (bi, "$(P)$(R)status") {
+	field (DTYP, "S7plc stat")
+	field (INP, "@Testsystem:0")
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "disconnected")
+	field (ONAM, "connected")
+	field (ZSV, "MAJOR")
+	field(FLNK, "$(P)$(R)status-counter")
+}
+record (calc, "$(P)$(R)status-counter") {
+	field (INPA, "$(P)$(R)status-counter")
+	field (CALC, "A+1")
+	field (FLNK, "$(P)$(R)disconnect-counter")
+}
+record (calc, "$(P)$(R)disconnect-counter") {
+	field (INPA, "$(P)$(R)status")
+	field (INPB, "$(P)$(R)disconnect-counter.LA")
+	field (INPC, "$(P)$(R)disconnect-counter")
+	field (CALC, "(A=0&&B=1)?C+1:C")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-UTL-WPR-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/0 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-UTL-WRT-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/4 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-XBPM1-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/8 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-XBPM1-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/12 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-XBPM1-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/16 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-XBPM1-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/20 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-XBPM1-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/24 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-XBPM2-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/28 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-XBPM2-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/32 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-XBPM2-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/36 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-XBPM2-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/40 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-XBPM2-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/44 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-MSK-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/48 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-MSK-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/52 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-MSK-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/56 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-MSK-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/60 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-MSK-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/64 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-SLITS-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/68 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-SLITS-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/72 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-SLITS-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/76 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-SLITS-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/80 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-SLITS-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/84 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_EMA+FOE-DEV-PS-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/88 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AS_EMA+FOE-UTL-CAR-PIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/92 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AS_EMA+FOE-UTL-WPR-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/96 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AS_EMA+FOE-UTL-WPR-PIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/100 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AS_EMA+FOE-UTL-WRT-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/104 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AS_EMA+FOE-UTL-WRT-PIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/108 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AS_EMA+FOE-DEV-XBPM1-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/112 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AS_EMA+FOE-DEV-XBPM2-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/116 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AS_EMA+FOE-DEV-MSK-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/120 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AS_EMA+FOE-DEV-SLITS-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/124 T=REAL32")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV1O") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/128 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV1C") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/128 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-VG1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/128 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-PS1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/128 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV2O") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/128 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV2C") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/128 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-VG2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/128 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-PS2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/128 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA-FOE-VAC-FV1O") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/129 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA-FOE-VAC-FV1C") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/129 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV3O") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/129 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV3C") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/129 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-VG3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/129 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-PS3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/129 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV4O") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/129 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV4C") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/129 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-VG4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/130 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-PS4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/130 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV5O") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/130 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV5C") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/130 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-VG5") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/130 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-PS5") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/130 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-VG6") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/130 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-VG7") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/130 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-PS6") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/131 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV6O") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/131 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV6C") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/131 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-UTL-WRT-SV") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/131 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-UTL-WPR-SV") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/131 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/131 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/131 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA_FOE_VAC_FV1SC") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/131 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA_FOE_VAC_FV1SO") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/132 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/132 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/132 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV5") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/132 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-VAC-GV6") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/132 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)A_FOE_VAC_GV1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/132 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)A_FOE_VAC_GV2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/132 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)A_FOE_VAC_GV3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/132 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)A_FOE_VAC_GV4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/133 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ALL_FOE_VAC_GV") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/133 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)A_FOE_VAC_GV5") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/133 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)A_FOE_VAC_GV6") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/133 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)A_FOE_VAC_FV1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/133 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)A_UTL_WRT_SV") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/133 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)A_UTL_WPT_SV") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/133 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)Fail_reset") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/133 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R) I_MP (S13)") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/134 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-UTL-CAR-PIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/134 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-UTL-WPR-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/134 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-UTL-WPR-PIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/134 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-UTL-WPR-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/134 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-UTL-WRT-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/134 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-UTL-WRT-PIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/134 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-UTL-WRT-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/134 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-XBPM1-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/135 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-XBPM1-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/135 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-XBPM1-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/135 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-XBPM1-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/135 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-XBPM1-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/135 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-XBPM1-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/135 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-XBPM2-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/135 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-XBPM2-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/135 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-XBPM2-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/136 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-XBPM2-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/136 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-XBPM2-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/136 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-XBPM2-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/136 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-MSK-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/136 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-MSK-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/136 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-MSK-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/136 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-MSK-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/136 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-MSK-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/137 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-MSK-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/137 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-SLITS-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/137 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-SLITS-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/137 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-SLITS-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/137 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-SLITS-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/137 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-SLITS-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/137 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-SLITS-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/137 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EMA+FOE-DEV-PS-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/138 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)EPS_STATUS") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/138 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)NOT_DUMP_STORAGE_RING") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/138 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)Shutter_OPEN") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/138 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)PPS_Status") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/138 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)I_Water_PaR_Flow_OK") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/138 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)I_Utilities_OK") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/138 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)I_Water_Flow_OK") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/138 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)I_Temperatures_OK") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/139 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)I_Vaccum_OK") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/139 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)I_Water_Pres") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/139 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)I_Water_Temp_OK") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/139 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)Beam_Simulation_BS") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/139 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)Beam_Simulation_AS") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/139 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)I_Gate_Valves") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/139 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)NOT_ FAIL_CONDITION") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/139 B=7 T=BYTE")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-UTL-WPR-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/0 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-UTL-WRT-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/4 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-XBPM1-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/8 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-XBPM1-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/12 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-XBPM1-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/16 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-XBPM1-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/20 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-XBPM1-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/24 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-XBPM2-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/28 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-XBPM2-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/32 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-XBPM2-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/36 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-XBPM2-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/40 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-XBPM2-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/44 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-MSK-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/48 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-MSK-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/52 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-MSK-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/56 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-MSK-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/60 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-MSK-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/64 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-SLITS-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/68 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-SLITS-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/72 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-SLITS-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/76 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-SLITS-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/80 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-SLITS-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/84 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AI_EMA+FOE-DEV-PS-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/88 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AS_EMA+FOE-UTL-CAR-PIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/92 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AS_EMA+FOE-UTL-WPR-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/96 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AS_EMA+FOE-UTL-WPR-PIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/100 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AS_EMA+FOE-UTL-WRT-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/104 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AS_EMA+FOE-UTL-WRT-PIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/108 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AS_EMA+FOE-DEV-XBPM1-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/112 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AS_EMA+FOE-DEV-XBPM2-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/116 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AS_EMA+FOE-DEV-MSK-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/120 T=REAL32")
+}
+
+record (ai, "$(P)$(R)OFFS_AS_EMA+FOE-DEV-SLITS-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/124 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-UTL-WPR-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/128 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-UTL-WRT-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/132 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-XBPM1-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/136 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-XBPM1-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/140 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-XBPM1-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/144 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-XBPM1-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/148 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-XBPM1-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/152 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-XBPM2-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/156 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-XBPM2-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/160 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-XBPM2-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/164 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-XBPM2-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/168 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-XBPM2-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/172 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-MSK-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/176 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-MSK-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/180 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-MSK-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/184 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-MSK-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/188 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-MSK-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/192 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-SLITS-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/196 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-SLITS-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/200 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-SLITS-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/204 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-SLITS-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/208 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-SLITS-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/212 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AI_EMA+FOE-DEV-PS-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/216 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AS_EMA+FOE-UTL-CAR-PIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/220 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AS_EMA+FOE-UTL-WPR-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/224 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AS_EMA+FOE-UTL-WPR-PIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/228 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AS_EMA+FOE-UTL-WRT-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/232 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AS_EMA+FOE-UTL-WRT-PIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/236 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AS_EMA+FOE-DEV-XBPM1-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/240 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AS_EMA+FOE-DEV-XBPM2-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/244 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AS_EMA+FOE-DEV-MSK-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/248 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SP_AS_EMA+FOE-DEV-SLITS-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/252 T=REAL32")
+}
+
+record (bi, "$(P)$(R)GV_ER_EMA+FOE-VAC-GV1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/256 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_to_O_EMA+FOE-VAC-GV1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/256 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_to_C_EMA+FOE-VAC-GV1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/256 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_M_W_CEMA+FOE-VAC-GV1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/256 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_SCEMA+FOE-VAC-GV1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/256 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_EMA+FOE-VAC-GV2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/256 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_to_O_EMA+FOE-VAC-GV2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/256 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_to_C_EMA+FOE-VAC-GV2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/256 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_M_W_CEMA+FOE-VAC-GV2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/257 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_SCEMA+FOE-VAC-GV2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/257 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_EMA_FOE_VAC_FV1SC") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/257 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_to_O_EMA_FOE_VAC_FV1SC") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/257 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_to_C_EMA_FOE_VAC_FV1SC") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/257 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_M_W_CEMA_FOE_VAC_FV1SC") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/257 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_SCEMA_FOE_VAC_FV1SC") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/257 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_M_GV3C") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/257 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_to_O_M_GV3C") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/258 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_to_C_M_GV3C") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/258 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_M_W_CM_GV3C") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/258 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_SCM_GV3C") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/258 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_EMA+FOE-VAC-GV4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/258 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_to_O_EMA+FOE-VAC-GV4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/258 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_to_C_EMA+FOE-VAC-GV4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/258 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_M_W_CEMA+FOE-VAC-GV4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/258 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_SCEMA+FOE-VAC-GV4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/259 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_EMA+FOE-VAC-GV5") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/259 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_to_O_EMA+FOE-VAC-GV5") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/259 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_to_C_EMA+FOE-VAC-GV5") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/259 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_M_W_CEMA+FOE-VAC-GV5") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/259 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_SCEMA+FOE-VAC-GV5") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/259 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_EMA+FOE-VAC-GV6") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/259 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_to_O_EMA+FOE-VAC-GV6") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/259 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_to_C_EMA+FOE-VAC-GV6") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/260 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_M_W_CEMA+FOE-VAC-GV6") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/260 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV_ER_SCEMA+FOE-VAC-GV6") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/260 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GV failure") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/260 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_I_Water_PaR_Flow_OK") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/260 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_I_Utilities_OK") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/260 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_I_Water_Flow_OK") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/260 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_I_Temperatures_OK") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/260 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_I_Vaccum_OK") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/261 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_I_Water_Pres") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/261 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_I_Water_Temp_OK") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/261 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-UTL-CAR-PIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/261 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-UTL-WPR-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/261 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-UTL-WPR-PIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/261 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-UTL-WPR-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/261 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-UTL-WRT-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/261 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-UTL-WRT-PIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/262 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-UTL-WRT-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/262 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-VAC-VG1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/262 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-VAC-PS1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/262 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-XBPM1-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/262 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-XBPM1-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/262 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-XBPM1-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/262 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-XBPM1-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/262 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-XBPM1-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/263 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-XBPM1-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/263 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-VAC-VG2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/263 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-VAC-PS2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/263 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-XBPM2-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/263 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-XBPM2-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/263 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-XBPM2-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/263 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-XBPM2-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/263 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-XBPM2-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/264 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-XBPM2-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/264 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-VAC-VG3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/264 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-VAC-PS3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/264 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-MSK-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/264 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-MSK-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/264 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-MSK-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/264 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-MSK-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/264 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-MSK-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/265 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-MSK-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/265 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-VAC-VG4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/265 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-VAC-PS4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/265 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-SLITS-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/265 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-SLITS-FIT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/265 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-SLITS-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/265 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-SLITS-TT2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/265 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-SLITS-TT3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/266 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-SLITS-TT4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/266 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-VAC-VG5") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/266 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-VAC-PS5") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/266 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-DEV-PS-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/266 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-VAC-VG6") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/266 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-VAC-VG7") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/266 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)ER_EMA+FOE-VAC-PS6") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem_alarms:0/266 B=7 T=BYTE")
+}
