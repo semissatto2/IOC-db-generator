@@ -18,13 +18,13 @@ try:
 except IndexError:
 	print "Argumentos invalidos. Execute $python .py (arquivo de entrada) (arquivo de saida)"
 	sys.exit()
-
+	
+# Variaveis para s7plc
 nome_comunicacao = ("Testsystem:0","Testsystem_alarms:0")  #Edite aqui com os nomes configurados em s7plcConfigure
-
-
 SCAN_field = '"I/O Intr"'
 DTYP_field = '"S7plc"'
 
+# Variaveis para logica
 flag_transicao = 0
 offset = [0]*2
 numero_bits = [0]*2
@@ -36,7 +36,7 @@ cat_da_variavel_antiga = ""
 cat_da_variavel_atual = ""
 tipo_da_variavel_antiga = ""
 tipo_da_variavel_atual = ""
-	
+
 def escreve_cabecario(PLC_name):
 	INP_field_cab = '"@%s"' %(PLC_name)	
 	ZNAM_field = '"disconnected"'
