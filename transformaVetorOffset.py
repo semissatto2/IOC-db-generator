@@ -86,21 +86,12 @@ for line in arquivo_entrada:
 		
 		if cat_da_variavel_atual != cat_da_variavel_antiga and cat_da_variavel_antiga != "":
 			print "Houve transicao de categoria"
-<<<<<<< HEAD
 			numero_bits[porta] = 0
 			#if offset[porta] != 0:
 			offset[porta] =  int(vetorOffset[indiceVetorOffset+1])
 			print (offset[porta])
 			tamanho_total[porta] = offset[porta]
 			indiceVetorOffset += 1
-=======
-			if tipo_da_variavel_antiga == "Bool\r\n":
-				print "Houve transicao de catoria com Bool anteriomente"			
-				numero_bits[porta] = 0
-				if offset[porta] != 0:
-					offset[porta] += 2
-					tamanho_total[porta] += 2
->>>>>>> df64a80de144b3ffc78e4a507425d676013d6c00
 	
 		if tipo_da_variavel == "Word\r\n":
 				escreve_record_ai(nome_da_variavel, nome_comunicacao[porta], offset[porta], "WORD")
