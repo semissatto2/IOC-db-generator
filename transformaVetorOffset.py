@@ -1,4 +1,13 @@
 #!/usr/bin/python
+
+###
+#	Código para geração automática de arquivo de configuração de variáveis EPICS 
+#	Execução:
+#	$python (arquivoEntrada.csv) (example.db)
+#	O código também imprime (no terminal) o tamanho total do DataBlock
+#	Guilherme Teixeira Semissatto - LNLS - 07/02/2017 - guilherme.semissatto@lnls.br
+###
+
 import sys
 
 try:
@@ -67,16 +76,13 @@ escreve_cabecario(nome_comunicacao[0])
 for line in arquivo_entrada:
         if numeroLinha == 0:
                 vetorOffset = line.split(",")
-                print (vetorOffset)
 
         if line == "***\r\n":
 		flag_transicao = 1
-		#porta += 1
-		#numero_bits[porta] = 0
 
 	if flag_transicao != 1 and numeroLinha != 0:
 		campos = line.split(",")
-		print campos
+		#print campos	# Debbug
 		nome_da_variavel = campos[0]
 		tipo_da_variavel_antiga = tipo_da_variavel_atual
 		tipo_da_variavel = campos[2]
@@ -85,11 +91,10 @@ for line in arquivo_entrada:
 		cat_da_variavel_atual = campos[1]
 		
 		if cat_da_variavel_atual != cat_da_variavel_antiga and cat_da_variavel_antiga != "":
-			print "Houve transicao de categoria"
+			#print "Houve transicao de categoria"	# Debugg
 			numero_bits[porta] = 0
-			#if offset[porta] != 0:
 			offset[porta] =  int(vetorOffset[indiceVetorOffset+1])
-			print (offset[porta])
+			#print (offset[porta])	# Debugg
 			tamanho_total[porta] = offset[porta]
 			indiceVetorOffset += 1
 	
@@ -111,6 +116,7 @@ for line in arquivo_entrada:
 		if tipo_da_variavel == "Bool\r\n":
 				escreve_record_bi(nome_da_variavel, nome_comunicacao[porta], offset[porta], numero_bits[porta], "BYTE")								
 				numero_bits[porta] = numero_bits[porta] + 1				
+				
 				if numero_bits[porta] == 8:
 					offset[porta] += 1
 					tamanho_total[porta] += 1
