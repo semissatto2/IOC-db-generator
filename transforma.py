@@ -10,7 +10,7 @@ except IndexError:
 	print "Argumentos invalidos. Execute $python .py (arquivo de entrada) (arquivo de saida)"
 	sys.exit()
 
-nome_comunicacao = ("Testsystem:0","Testsystem_alarms:0") #Edite aqui com os nomes configurados em s7plcConfigure
+nome_comunicacao = ("Testsystem:0","Testsystem_alarms:0")  #Edite aqui com os nomes configurados em s7plcConfigure
 
 
 SCAN_field = '"I/O Intr"'
@@ -21,6 +21,8 @@ offset = [0]*2
 numero_bits = [0]*2
 tamanho_total = [0]*2
 porta = 0
+numeroLinha = 0
+indiceVetorOffset = 0
 cat_da_variavel_antiga = ""
 cat_da_variavel_atual = ""
 tipo_da_variavel_antiga = ""
@@ -63,13 +65,16 @@ def escreve_record_bi(nome_da_variavel, PLC_name, bit, offset, _type):
 escreve_cabecario(nome_comunicacao[0])
 
 for line in arquivo_entrada:
+        if numeroLinha == 0:
+                vetorOffset = line.split(",")
+                print (vetorOffset)
 
         if line == "***\r\n":
 		flag_transicao = 1
-		porta += 1
-		numero_bits[porta] = 0
+		#porta += 1
+		#numero_bits[porta] = 0
 
-	if flag_transicao != 1:
+	if flag_transicao != 1 and numeroLinha != 0:
 		campos = line.split(",")
 		print campos
 		nome_da_variavel = campos[0]
@@ -81,13 +86,13 @@ for line in arquivo_entrada:
 		
 		if cat_da_variavel_atual != cat_da_variavel_antiga and cat_da_variavel_antiga != "":
 			print "Houve transicao de categoria"
-			if tipo_da_variavel_antiga == "Bool\r\n":
-				print "Houve transicao de catoria com Bool anteriomente"			
-				numero_bits[porta] = 0
-				tamanho_total[porta] += 1
-				if offset[porta] != 0:
-					offset[porta] += 1
-		
+			numero_bits[porta] = 0
+			#if offset[porta] != 0:
+			offset[porta] =  int(vetorOffset[indiceVetorOffset+1])
+			print (offset[porta])
+			tamanho_total[porta] = offset[porta]
+			indiceVetorOffset += 1
+	
 		if tipo_da_variavel == "Word\r\n":
 				escreve_record_ai(nome_da_variavel, nome_comunicacao[porta], offset[porta], "WORD")
 				offset[porta] += 2
@@ -113,6 +118,7 @@ for line in arquivo_entrada:
 
 		
 	flag_transicao = 0
+	numeroLinha += 1
 
 print tamanho_total
 arquivo_saida.close()
