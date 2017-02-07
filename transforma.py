@@ -84,10 +84,10 @@ for line in arquivo_entrada:
 			if tipo_da_variavel_antiga == "Bool\r\n":
 				print "Houve transicao de catoria com Bool anteriomente"			
 				numero_bits[porta] = 0
-				tamanho_total[porta] += 1
 				if offset[porta] != 0:
-					offset[porta] += 1
-		
+					offset[porta] += 2
+					tamanho_total[porta] += 2
+	
 		if tipo_da_variavel == "Word\r\n":
 				escreve_record_ai(nome_da_variavel, nome_comunicacao[porta], offset[porta], "WORD")
 				offset[porta] += 2
