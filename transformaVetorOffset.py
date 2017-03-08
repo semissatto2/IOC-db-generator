@@ -16,7 +16,7 @@ except IndexError:
 	sys.exit()
 	
 # Variaveis para s7plc
-nome_comunicacao = ("Testsystem:0","Testsystem_alarms:0")  #Edite aqui com os nomes configurados em s7plcConfigure. Index 0: Leitura. Index 1: Escrita. 
+nome_comunicacao = ("Testsystem:0","Testsystem:0")  #Edite aqui com os nomes configurados em s7plcConfigure. Index 0: Leitura. Index 1: Escrita. 
 SCAN_field = '"I/O Intr"'
 DTYP_field = '"S7plc"'
 
@@ -85,7 +85,7 @@ for line in arquivo_entrada:
                 vetorOffset = line.split(",")
         if numeroLinha == 1:
                 vetorOffset_write = line.split(",")
-        if line == "***\n":
+        if line == "***\r\n":
                 flag_transicao = 1
 
 	if flag_transicao != 1 and numeroLinha != 0 and numeroLinha != 1:
@@ -106,44 +106,44 @@ for line in arquivo_entrada:
 				#print (offset[porta])	# Debugg
 				tamanho_total[1] = offset[1]
 				indiceVetorOffset_write += 1
-			else:
-				numero_bits[0] = 0
-				offset[0] =  int(vetorOffset[indiceVetorOffset+1])
-				#print (offset[porta])	# Debugg
-				tamanho_total[0] = offset[0]
-				indiceVetorOffset += 1				
+			#else:
+			numero_bits[0] = 0
+			offset[0] =  int(vetorOffset[indiceVetorOffset+1])
+			#print (offset[porta])	# Debugg
+			tamanho_total[0] = offset[0]
+			indiceVetorOffset += 1				
 	
-		if tipo_da_variavel == "Word\n":
+		if tipo_da_variavel == "Word\r\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':
 					escreve_record_ao(nome_da_variavel, nome_comunicacao[1], offset[1], "WORD")
 					offset[1] += 2
 					tamanho_total[1] +=2
-				else:
-					escreve_record_ai(nome_da_variavel, nome_comunicacao[0], offset[0], "WORD")
-					offset[0] += 2
-					tamanho_total[0] +=2					
+				#else:
+				escreve_record_ai(nome_da_variavel, nome_comunicacao[0], offset[0], "WORD")
+				offset[0] += 2
+				tamanho_total[0] +=2					
  
-		if tipo_da_variavel == "Real\n":
+		if tipo_da_variavel == "Real\r\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':			
 					escreve_record_ao(nome_da_variavel, nome_comunicacao[1], offset[1], "REAL32")				
 					offset[1] += 4
 					tamanho_total[1] += 4
-				else:
-					escreve_record_ai(nome_da_variavel, nome_comunicacao[0], offset[0], "REAL32")				
-					offset[0] += 4
-					tamanho_total[0] += 4
+				#else:
+				escreve_record_ai(nome_da_variavel, nome_comunicacao[0], offset[0], "REAL32")				
+				offset[0] += 4
+				tamanho_total[0] += 4
 					
-		if tipo_da_variavel == "Int\n":
+		if tipo_da_variavel == "Int\r\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':
 					escreve_record_ao(nome_da_variavel, nome_comunicacao[1], offset[1], "INT16")				
 					offset[1] += 2
 					tamanho_total[1] += 2					
-				else:
-					escreve_record_ai(nome_da_variavel, nome_comunicacao[0], offset[0], "INT16")				
-					offset[0] += 2
-					tamanho_total[0] += 2
+				#else:
+				escreve_record_ai(nome_da_variavel, nome_comunicacao[0], offset[0], "INT16")				
+				offset[0] += 2
+				tamanho_total[0] += 2
 				
-		if tipo_da_variavel == "Bool\n":
+		if tipo_da_variavel == "Bool\r\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':
 					escreve_record_bo(nome_da_variavel, nome_comunicacao[1], offset[1], numero_bits[1], "BYTE")								
 					numero_bits[1] = numero_bits[1] + 1				
@@ -152,14 +152,14 @@ for line in arquivo_entrada:
 						offset[1] += 1
 						tamanho_total[1] += 1
 						numero_bits[1] = 0					
-				else:
-					escreve_record_bi(nome_da_variavel, nome_comunicacao[0], offset[0], numero_bits[0], "BYTE")								
-					numero_bits[0] = numero_bits[0] + 1				
+				#else:
+				escreve_record_bi(nome_da_variavel, nome_comunicacao[0], offset[0], numero_bits[0], "BYTE")								
+				numero_bits[0] = numero_bits[0] + 1				
 
-					if numero_bits[0] == 8:
-						offset[0] += 1
-						tamanho_total[0] += 1
-						numero_bits[0] = 0	
+				if numero_bits[0] == 8:
+					offset[0] += 1
+					tamanho_total[0] += 1
+					numero_bits[0] = 0	
 
 		
 	flag_transicao = 0
