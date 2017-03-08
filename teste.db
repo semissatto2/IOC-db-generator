@@ -28,13 +28,13 @@ record (ai, "$(P)$(R)AI_UTL-WPR-TT") {
 record (ai, "$(P)$(R)AI_UTL-WRT-TT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
-	field (INP, "@Testsystem:0/4 T=INT16")
+	field (INP, "@Testsystem:0/50 T=INT16")
 }
 
 record (bi, "$(P)$(R)AI_DEV-XBPM1-TT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
-	field (INP, "@Testsystem:0/6 B=0 T=BYTE")
+	field (INP, "@Testsystem:0/100 B=0 T=BYTE")
 }
 
 record (ao, "$(P)$(R)AI_UTL-WPR-TT_W") {
@@ -44,11 +44,11 @@ record (ao, "$(P)$(R)AI_UTL-WPR-TT_W") {
 
 record (ao, "$(P)$(R)AI_UTL-WRT-TT_W") {
 	field (DTYP, "S7plc")
-	field (OUT, "@Testsystem_alarms:0/4 T=INT16")
+	field (OUT, "@Testsystem_alarms:0/15 T=INT16")
 }
 
 record (bo, "$(P)$(R)AI_DEV-XBPM1-TT_W") {
 	field (DTYP, "S7plc")
-	field (OUT, "@Testsystem_alarms:0/6 B=0 T=BYTE")
+	field (OUT, "@Testsystem_alarms:0/30 B=0 T=BYTE")
 	field (PINI, "YES")
 }

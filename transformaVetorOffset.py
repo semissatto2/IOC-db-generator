@@ -82,10 +82,12 @@ escreve_cabecario(nome_comunicacao[0])
 for line in arquivo_entrada:
         if numeroLinha == 0:
                 vetorOffset = line.split(",")
-	if numeroLinha == 1:
-		vetorOffset_write = line.split(",")
+                print vetorOffset
+        if numeroLinha == 1:
+                vetorOffset_write = line.split(",")
+                print vetorOffset_write
         if line == "***\n":
-		flag_transicao = 1
+                flag_transicao = 1
 
 	if flag_transicao != 1 and numeroLinha != 0 and numeroLinha != 1:
 		campos = line.split(",")
@@ -101,15 +103,15 @@ for line in arquivo_entrada:
 			#print "Houve transicao de categoria"	# Debugg
 			if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':
 				numero_bits[1] = 0
-				offset[1] =  int(vetorOffset_write[indiceVetorOffset[1]+1])
+				offset[1] =  int(vetorOffset_write[indiceVetorOffset[1]])
 				#print (offset[porta])	# Debugg
 				tamanho_total[1] = offset[1]
 				indiceVetorOffset[1] += 1
 			else:
 				numero_bits[0] = 0
-				offset[0] =  int(vetorOffset_write[indiceVetorOffset[0]+1])
+				offset[0] =  int(vetorOffset[indiceVetorOffset[0]+1])
 				#print (offset[porta])	# Debugg
-				tamanho_total[0] = offset[1]
+				tamanho_total[0] = offset[0]
 				indiceVetorOffset[0] += 1				
 	
 		if tipo_da_variavel == "Word\n":
