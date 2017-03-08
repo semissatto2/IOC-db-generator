@@ -84,12 +84,12 @@ for line in arquivo_entrada:
                 vetorOffset = line.split(",")
 	if numeroLinha == 1:
 		vetorOffset_write = line.split(",")
-        if line == "***\r\n":
+        if line == "***\n":
 		flag_transicao = 1
 
 	if flag_transicao != 1 and numeroLinha != 0 and numeroLinha != 1:
 		campos = line.split(",")
-		#print campos	# Debbug
+		print campos	# Debbug
 		nome_da_variavel = campos[0]
 		tipo_da_variavel_antiga = tipo_da_variavel_atual
 		tipo_da_variavel = campos[2]
@@ -112,7 +112,7 @@ for line in arquivo_entrada:
 				tamanho_total[0] = offset[1]
 				indiceVetorOffset[0] += 1				
 	
-		if tipo_da_variavel == "Word\r\n":
+		if tipo_da_variavel == "Word\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':
 					escreve_record_ao(nome_da_variavel, nome_comunicacao[1], offset[1], "WORD")
 					offset[1] += 2
@@ -122,7 +122,7 @@ for line in arquivo_entrada:
 					offset[0] += 2
 					tamanho_total[0] +=2					
  
-		if tipo_da_variavel == "Real\r\n":
+		if tipo_da_variavel == "Real\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':			
 					escreve_record_ao(nome_da_variavel, nome_comunicacao[1], offset[1], "REAL32")				
 					offset[1] += 4
@@ -132,7 +132,7 @@ for line in arquivo_entrada:
 					offset[0] += 4
 					tamanho_total[0] += 4
 					
-		if tipo_da_variavel == "Int\r\n":
+		if tipo_da_variavel == "Int\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':
 					escreve_record_ao(nome_da_variavel, nome_comunicacao[1], offset[1], "INT16")				
 					offset[1] += 2
@@ -142,7 +142,7 @@ for line in arquivo_entrada:
 					offset[0] += 2
 					tamanho_total[0] += 2
 				
-		if tipo_da_variavel == "Bool\r\n":
+		if tipo_da_variavel == "Bool\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':
 					escreve_record_bo(nome_da_variavel, nome_comunicacao[1], offset[1], numero_bits[1], "BYTE")								
 					numero_bits[1] = numero_bits[1] + 1				
