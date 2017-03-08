@@ -27,7 +27,8 @@ numero_bits = [0]*2
 tamanho_total = [0]*2
 porta = [0,1] # Porta 0 significa leitura de dados do CLP. Porta 1 significa escrita de dados no CLP.
 numeroLinha = 0
-indiceVetorOffset = [0]*2
+indiceVetorOffset = 0
+indiceVetorOffset_write = 0
 cat_da_variavel_antiga = ""
 cat_da_variavel_atual = ""
 tipo_da_variavel_antiga = ""
@@ -82,10 +83,8 @@ escreve_cabecario(nome_comunicacao[0])
 for line in arquivo_entrada:
         if numeroLinha == 0:
                 vetorOffset = line.split(",")
-                print vetorOffset
         if numeroLinha == 1:
                 vetorOffset_write = line.split(",")
-                print vetorOffset_write
         if line == "***\n":
                 flag_transicao = 1
 
@@ -103,16 +102,16 @@ for line in arquivo_entrada:
 			#print "Houve transicao de categoria"	# Debugg
 			if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':
 				numero_bits[1] = 0
-				offset[1] =  int(vetorOffset_write[indiceVetorOffset[1]])
+				offset[1] =  int(vetorOffset_write[indiceVetorOffset_write+1])
 				#print (offset[porta])	# Debugg
 				tamanho_total[1] = offset[1]
-				indiceVetorOffset[1] += 1
+				indiceVetorOffset_write += 1
 			else:
 				numero_bits[0] = 0
-				offset[0] =  int(vetorOffset[indiceVetorOffset[0]+1])
+				offset[0] =  int(vetorOffset[indiceVetorOffset+1])
 				#print (offset[porta])	# Debugg
 				tamanho_total[0] = offset[0]
-				indiceVetorOffset[0] += 1				
+				indiceVetorOffset += 1				
 	
 		if tipo_da_variavel == "Word\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':

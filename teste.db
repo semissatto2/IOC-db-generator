@@ -25,10 +25,46 @@ record (ai, "$(P)$(R)AI_UTL-WPR-TT") {
 	field (INP, "@Testsystem:0/0 T=REAL32")
 }
 
+record (ai, "$(P)$(R)AI_UTL-WPR-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/4 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_UTL-WPR-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/8 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AI_UTL-WPR-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/12 T=REAL32")
+}
+
 record (ai, "$(P)$(R)AI_UTL-WRT-TT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/50 T=INT16")
+}
+
+record (ai, "$(P)$(R)AI_UTL-WRT-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/52 T=INT16")
+}
+
+record (ai, "$(P)$(R)AI_UTL-WRT-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/54 T=INT16")
+}
+
+record (ai, "$(P)$(R)AI_UTL-WRT-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/56 T=INT16")
 }
 
 record (bi, "$(P)$(R)AI_DEV-XBPM1-TT") {
@@ -37,18 +73,50 @@ record (bi, "$(P)$(R)AI_DEV-XBPM1-TT") {
 	field (INP, "@Testsystem:0/100 B=0 T=BYTE")
 }
 
-record (ao, "$(P)$(R)AI_UTL-WPR-TT_W") {
+record (bi, "$(P)$(R)AI_DEV-XBPM1-TT") {
+	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
-	field (OUT, "@Testsystem_alarms:0/0 T=REAL32")
+	field (INP, "@Testsystem:0/100 B=1 T=BYTE")
 }
 
-record (ao, "$(P)$(R)AI_UTL-WRT-TT_W") {
+record (bi, "$(P)$(R)AI_DEV-XBPM1-TT") {
+	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
-	field (OUT, "@Testsystem_alarms:0/15 T=INT16")
+	field (INP, "@Testsystem:0/100 B=2 T=BYTE")
 }
 
-record (bo, "$(P)$(R)AI_DEV-XBPM1-TT_W") {
+record (bi, "$(P)$(R)AI_DEV-XBPM1-TT") {
+	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
-	field (OUT, "@Testsystem_alarms:0/30 B=0 T=BYTE")
-	field (PINI, "YES")
+	field (INP, "@Testsystem:0/100 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)AI_DEV-XBPM1-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/100 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)AI_DEV-XBPM1-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/100 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)AI_DEV-XBPM1-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/100 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)AI_DEV-XBPM1-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/100 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)AI_DEV-XBPM1-TT") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/101 B=0 T=BYTE")
 }
