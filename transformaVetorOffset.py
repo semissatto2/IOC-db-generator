@@ -102,7 +102,7 @@ for line in arquivo_entrada:
 			#print "Houve transicao de categoria"	# Debugg
 			if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':
 				numero_bits[1] = 0
-				offset[1] =  int(vetorOffset_write[indiceVetorOffset_write+1])
+				offset[1] =  int(vetorOffset_write[indiceVetorOffset_write])
 				#print (offset[porta])	# Debugg
 				tamanho_total[1] = offset[1]
 				indiceVetorOffset_write += 1

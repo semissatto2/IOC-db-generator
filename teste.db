@@ -120,3 +120,97 @@ record (bi, "$(P)$(R)AI_DEV-XBPM1-TT") {
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/101 B=0 T=BYTE")
 }
+
+record (ao, "$(P)$(R)AI_UTL-WPR-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/0 T=REAL32")
+}
+
+record (ao, "$(P)$(R)AI_UTL-WPR-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/4 T=REAL32")
+}
+
+record (ao, "$(P)$(R)AI_UTL-WPR-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/8 T=REAL32")
+}
+
+record (ao, "$(P)$(R)AI_UTL-WPR-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/12 T=REAL32")
+}
+
+record (ao, "$(P)$(R)AI_UTL-WRT-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/15 T=INT16")
+}
+
+record (ao, "$(P)$(R)AI_UTL-WRT-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/17 T=INT16")
+}
+
+record (ao, "$(P)$(R)AI_UTL-WRT-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/19 T=INT16")
+}
+
+record (ao, "$(P)$(R)AI_UTL-WRT-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/21 T=INT16")
+}
+
+record (bo, "$(P)$(R)AI_DEV-XBPM1-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/30 B=0 T=BYTE")
+	field (PINI, "YES")
+}
+
+record (bo, "$(P)$(R)AI_DEV-XBPM1-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/30 B=1 T=BYTE")
+	field (PINI, "YES")
+}
+
+record (bo, "$(P)$(R)AI_DEV-XBPM1-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/30 B=2 T=BYTE")
+	field (PINI, "YES")
+}
+
+record (bo, "$(P)$(R)AI_DEV-XBPM1-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/30 B=3 T=BYTE")
+	field (PINI, "YES")
+}
+
+record (bo, "$(P)$(R)AI_DEV-XBPM1-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/30 B=4 T=BYTE")
+	field (PINI, "YES")
+}
+
+record (bo, "$(P)$(R)AI_DEV-XBPM1-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/30 B=5 T=BYTE")
+	field (PINI, "YES")
+}
+
+record (bo, "$(P)$(R)AI_DEV-XBPM1-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/30 B=6 T=BYTE")
+	field (PINI, "YES")
+}
+
+record (bo, "$(P)$(R)AI_DEV-XBPM1-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/30 B=7 T=BYTE")
+	field (PINI, "YES")
+}
+
+record (bo, "$(P)$(R)AI_DEV-XBPM1-TT_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_alarms:0/31 B=0 T=BYTE")
+	field (PINI, "YES")
+}
