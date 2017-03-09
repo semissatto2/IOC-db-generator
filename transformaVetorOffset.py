@@ -16,7 +16,7 @@ except IndexError:
 	sys.exit()
 	
 # Variaveis para s7plc
-nome_comunicacao = ("Testsystem:0","Testsystem:0")  #Edite aqui com os nomes configurados em s7plcConfigure. Index 0: Leitura. Index 1: Escrita. 
+nome_comunicacao = ("Testsystem:0","Testsystem_write:0")  #Edite aqui com os nomes configurados em s7plcConfigure. Index 0: Leitura. Index 1: Escrita. 
 SCAN_field = '"I/O Intr"'
 DTYP_field = '"S7plc"'
 
