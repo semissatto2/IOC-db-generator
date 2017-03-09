@@ -517,7 +517,7 @@ record (bi, "$(P)$(R)VAC-GV6") {
 	field (INP, "@Testsystem:0/135 B=1 T=BYTE")
 }
 
-record (bo, "$(P)$(R)MC_ALL_FOE_VAC_GV_W") {
+record (bo, "$(P)$(R)MC_ALL_FOE_VAC_GV_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/0 B=0 T=BYTE")
 	field (PINI, "YES")
@@ -529,7 +529,7 @@ record (bi, "$(P)$(R)MC_ALL_FOE_VAC_GV_W") {
 	field (INP, "@Testsystem:0/136 B=0 T=BYTE")
 }
 
-record (bo, "$(P)$(R)MO_ALL_FOE_VAC_GV_W") {
+record (bo, "$(P)$(R)MO_ALL_FOE_VAC_GV_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/0 B=1 T=BYTE")
 	field (PINI, "YES")
@@ -541,7 +541,7 @@ record (bi, "$(P)$(R)MO_ALL_FOE_VAC_GV_W") {
 	field (INP, "@Testsystem:0/136 B=1 T=BYTE")
 }
 
-record (bo, "$(P)$(R)MC_A_FOE_VAC_GV1_W") {
+record (bo, "$(P)$(R)MC_A_FOE_VAC_GV1_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/0 B=2 T=BYTE")
 	field (PINI, "YES")
@@ -553,7 +553,7 @@ record (bi, "$(P)$(R)MC_A_FOE_VAC_GV1_W") {
 	field (INP, "@Testsystem:0/136 B=2 T=BYTE")
 }
 
-record (bo, "$(P)$(R)MO_A_FOE_VAC_GV1_W") {
+record (bo, "$(P)$(R)MO_A_FOE_VAC_GV1_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/0 B=3 T=BYTE")
 	field (PINI, "YES")
@@ -565,7 +565,7 @@ record (bi, "$(P)$(R)MO_A_FOE_VAC_GV1_W") {
 	field (INP, "@Testsystem:0/136 B=3 T=BYTE")
 }
 
-record (bo, "$(P)$(R)MC_A_FOE_VAC_GV2_W") {
+record (bo, "$(P)$(R)MC_A_FOE_VAC_GV2_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/0 B=4 T=BYTE")
 	field (PINI, "YES")
@@ -577,7 +577,7 @@ record (bi, "$(P)$(R)MC_A_FOE_VAC_GV2_W") {
 	field (INP, "@Testsystem:0/136 B=4 T=BYTE")
 }
 
-record (bo, "$(P)$(R)MO_A_FOE_VAC_GV2_W") {
+record (bo, "$(P)$(R)MO_A_FOE_VAC_GV2_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/0 B=5 T=BYTE")
 	field (PINI, "YES")
@@ -589,7 +589,7 @@ record (bi, "$(P)$(R)MO_A_FOE_VAC_GV2_W") {
 	field (INP, "@Testsystem:0/136 B=5 T=BYTE")
 }
 
-record (bo, "$(P)$(R)MC_A_FOE_VAC_GV3_W") {
+record (bo, "$(P)$(R)MC_A_FOE_VAC_GV3_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/0 B=6 T=BYTE")
 	field (PINI, "YES")
@@ -601,7 +601,7 @@ record (bi, "$(P)$(R)MC_A_FOE_VAC_GV3_W") {
 	field (INP, "@Testsystem:0/136 B=6 T=BYTE")
 }
 
-record (bo, "$(P)$(R)MO_A_FOE_VAC_GV3_W") {
+record (bo, "$(P)$(R)MO_A_FOE_VAC_GV3_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/0 B=7 T=BYTE")
 	field (PINI, "YES")
@@ -613,7 +613,7 @@ record (bi, "$(P)$(R)MO_A_FOE_VAC_GV3_W") {
 	field (INP, "@Testsystem:0/136 B=7 T=BYTE")
 }
 
-record (bo, "$(P)$(R)MC_A_FOE_VAC_GV4_W") {
+record (bo, "$(P)$(R)MC_A_FOE_VAC_GV4_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/1 B=0 T=BYTE")
 	field (PINI, "YES")
@@ -625,7 +625,7 @@ record (bi, "$(P)$(R)MC_A_FOE_VAC_GV4_W") {
 	field (INP, "@Testsystem:0/137 B=0 T=BYTE")
 }
 
-record (bo, "$(P)$(R)MO_A_FOE_VAC_GV4_W") {
+record (bo, "$(P)$(R)MO_A_FOE_VAC_GV4_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/1 B=1 T=BYTE")
 	field (PINI, "YES")
@@ -637,7 +637,7 @@ record (bi, "$(P)$(R)MO_A_FOE_VAC_GV4_W") {
 	field (INP, "@Testsystem:0/137 B=1 T=BYTE")
 }
 
-record (bo, "$(P)$(R)MC_A_FOE_VAC_GV5_W") {
+record (bo, "$(P)$(R)MC_A_FOE_VAC_GV5_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/1 B=2 T=BYTE")
 	field (PINI, "YES")
@@ -649,7 +649,7 @@ record (bi, "$(P)$(R)MC_A_FOE_VAC_GV5_W") {
 	field (INP, "@Testsystem:0/137 B=2 T=BYTE")
 }
 
-record (bo, "$(P)$(R)MO_A_FOE_VAC_GV5_W") {
+record (bo, "$(P)$(R)MO_A_FOE_VAC_GV5_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/1 B=3 T=BYTE")
 	field (PINI, "YES")
@@ -661,7 +661,7 @@ record (bi, "$(P)$(R)MO_A_FOE_VAC_GV5_W") {
 	field (INP, "@Testsystem:0/137 B=3 T=BYTE")
 }
 
-record (bo, "$(P)$(R)MC_A_FOE_VAC_GV6_W") {
+record (bo, "$(P)$(R)MC_A_FOE_VAC_GV6_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/1 B=4 T=BYTE")
 	field (PINI, "YES")
@@ -673,7 +673,7 @@ record (bi, "$(P)$(R)MC_A_FOE_VAC_GV6_W") {
 	field (INP, "@Testsystem:0/137 B=4 T=BYTE")
 }
 
-record (bo, "$(P)$(R)MO_A_FOE_VAC_GV6_W") {
+record (bo, "$(P)$(R)MO_A_FOE_VAC_GV6_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/1 B=5 T=BYTE")
 	field (PINI, "YES")
@@ -685,7 +685,7 @@ record (bi, "$(P)$(R)MO_A_FOE_VAC_GV6_W") {
 	field (INP, "@Testsystem:0/137 B=5 T=BYTE")
 }
 
-record (bo, "$(P)$(R)MC_A_FOE_VAC_FV1_W") {
+record (bo, "$(P)$(R)MC_A_FOE_VAC_FV1_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/1 B=6 T=BYTE")
 	field (PINI, "YES")
@@ -697,7 +697,7 @@ record (bi, "$(P)$(R)MC_A_FOE_VAC_FV1_W") {
 	field (INP, "@Testsystem:0/137 B=6 T=BYTE")
 }
 
-record (bo, "$(P)$(R)MO_A_FOE_VAC_FV1_W") {
+record (bo, "$(P)$(R)MO_A_FOE_VAC_FV1_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/1 B=7 T=BYTE")
 	field (PINI, "YES")
@@ -709,7 +709,7 @@ record (bi, "$(P)$(R)MO_A_FOE_VAC_FV1_W") {
 	field (INP, "@Testsystem:0/137 B=7 T=BYTE")
 }
 
-record (bo, "$(P)$(R)A_FOE_VAC_GV1_W") {
+record (bo, "$(P)$(R)A_FOE_VAC_GV1_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/2 B=0 T=BYTE")
 	field (PINI, "YES")
@@ -721,7 +721,7 @@ record (bi, "$(P)$(R)A_FOE_VAC_GV1_W") {
 	field (INP, "@Testsystem:0/138 B=0 T=BYTE")
 }
 
-record (bo, "$(P)$(R)A_FOE_VAC_GV2_W") {
+record (bo, "$(P)$(R)A_FOE_VAC_GV2_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/2 B=1 T=BYTE")
 	field (PINI, "YES")
@@ -733,7 +733,7 @@ record (bi, "$(P)$(R)A_FOE_VAC_GV2_W") {
 	field (INP, "@Testsystem:0/138 B=1 T=BYTE")
 }
 
-record (bo, "$(P)$(R)A_FOE_VAC_GV3_W") {
+record (bo, "$(P)$(R)A_FOE_VAC_GV3_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/2 B=2 T=BYTE")
 	field (PINI, "YES")
@@ -745,7 +745,7 @@ record (bi, "$(P)$(R)A_FOE_VAC_GV3_W") {
 	field (INP, "@Testsystem:0/138 B=2 T=BYTE")
 }
 
-record (bo, "$(P)$(R)A_FOE_VAC_GV4_W") {
+record (bo, "$(P)$(R)A_FOE_VAC_GV4_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/2 B=3 T=BYTE")
 	field (PINI, "YES")
@@ -757,7 +757,7 @@ record (bi, "$(P)$(R)A_FOE_VAC_GV4_W") {
 	field (INP, "@Testsystem:0/138 B=3 T=BYTE")
 }
 
-record (bo, "$(P)$(R)ALL_FOE_VAC_GV_W") {
+record (bo, "$(P)$(R)ALL_FOE_VAC_GV_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/2 B=4 T=BYTE")
 	field (PINI, "YES")
@@ -769,7 +769,7 @@ record (bi, "$(P)$(R)ALL_FOE_VAC_GV_W") {
 	field (INP, "@Testsystem:0/138 B=4 T=BYTE")
 }
 
-record (bo, "$(P)$(R)A_FOE_VAC_GV5_W") {
+record (bo, "$(P)$(R)A_FOE_VAC_GV5_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/2 B=5 T=BYTE")
 	field (PINI, "YES")
@@ -781,7 +781,7 @@ record (bi, "$(P)$(R)A_FOE_VAC_GV5_W") {
 	field (INP, "@Testsystem:0/138 B=5 T=BYTE")
 }
 
-record (bo, "$(P)$(R)A_FOE_VAC_GV6_W") {
+record (bo, "$(P)$(R)A_FOE_VAC_GV6_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/2 B=6 T=BYTE")
 	field (PINI, "YES")
@@ -793,7 +793,7 @@ record (bi, "$(P)$(R)A_FOE_VAC_GV6_W") {
 	field (INP, "@Testsystem:0/138 B=6 T=BYTE")
 }
 
-record (bo, "$(P)$(R)A_FOE_VAC_FV1_W") {
+record (bo, "$(P)$(R)A_FOE_VAC_FV1_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/2 B=7 T=BYTE")
 	field (PINI, "YES")
@@ -805,7 +805,7 @@ record (bi, "$(P)$(R)A_FOE_VAC_FV1_W") {
 	field (INP, "@Testsystem:0/138 B=7 T=BYTE")
 }
 
-record (bo, "$(P)$(R)A_UTL_WRT_SV_W") {
+record (bo, "$(P)$(R)A_UTL_WRT_SV_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/3 B=0 T=BYTE")
 	field (PINI, "YES")
@@ -817,7 +817,7 @@ record (bi, "$(P)$(R)A_UTL_WRT_SV_W") {
 	field (INP, "@Testsystem:0/139 B=0 T=BYTE")
 }
 
-record (bo, "$(P)$(R)A_UTL_WPT_SV_W") {
+record (bo, "$(P)$(R)A_UTL_WPT_SV_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/3 B=1 T=BYTE")
 	field (PINI, "YES")
@@ -829,7 +829,7 @@ record (bi, "$(P)$(R)A_UTL_WPT_SV_W") {
 	field (INP, "@Testsystem:0/139 B=1 T=BYTE")
 }
 
-record (bo, "$(P)$(R)Fail_reset_W") {
+record (bo, "$(P)$(R)Fail_reset_W_") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem:0/3 B=2 T=BYTE")
 	field (PINI, "YES")

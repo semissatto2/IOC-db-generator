@@ -115,7 +115,7 @@ for line in arquivo_entrada:
 	
 		if tipo_da_variavel == "Word\r\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':
-					escreve_record_ao(nome_da_variavel, nome_comunicacao[1], offset[1], "WORD")
+					escreve_record_ao(nome_da_variavel+'_', nome_comunicacao[1], offset[1], "WORD")
 					offset[1] += 2
 					tamanho_total[1] +=2
 				#else:
@@ -125,7 +125,7 @@ for line in arquivo_entrada:
  
 		if tipo_da_variavel == "Real\r\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':			
-					escreve_record_ao(nome_da_variavel, nome_comunicacao[1], offset[1], "REAL32")				
+					escreve_record_ao(nome_da_variavel+'_', nome_comunicacao[1], offset[1], "REAL32")				
 					offset[1] += 4
 					tamanho_total[1] += 4
 				#else:
@@ -135,7 +135,7 @@ for line in arquivo_entrada:
 					
 		if tipo_da_variavel == "Int\r\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':
-					escreve_record_ao(nome_da_variavel, nome_comunicacao[1], offset[1], "INT16")				
+					escreve_record_ao(nome_da_variavel+'_', nome_comunicacao[1], offset[1], "INT16")				
 					offset[1] += 2
 					tamanho_total[1] += 2					
 				#else:
@@ -145,7 +145,7 @@ for line in arquivo_entrada:
 				
 		if tipo_da_variavel == "Bool\r\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':
-					escreve_record_bo(nome_da_variavel, nome_comunicacao[1], offset[1], numero_bits[1], "BYTE")								
+					escreve_record_bo(nome_da_variavel+'_', nome_comunicacao[1], offset[1], numero_bits[1], "BYTE")								
 					numero_bits[1] = numero_bits[1] + 1				
 
 					if numero_bits[1] == 8:
