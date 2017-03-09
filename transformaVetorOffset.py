@@ -118,48 +118,60 @@ for line in arquivo_entrada:
 					escreve_record_ao(nome_da_variavel+'_', nome_comunicacao[1], offset[1], "WORD")
 					offset[1] += 2
 					tamanho_total[1] +=2
-				#else:
-				escreve_record_ai(nome_da_variavel, nome_comunicacao[0], offset[0], "WORD")
-				offset[0] += 2
-				tamanho_total[0] +=2					
+					offset[0] += 2
+					tamanho_total[0] +=2					
+				else:
+					escreve_record_ai(nome_da_variavel, nome_comunicacao[0], offset[0], "WORD")
+					offset[0] += 2
+					tamanho_total[0] +=2					
  
 		if tipo_da_variavel == "Real\r\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':			
 					escreve_record_ao(nome_da_variavel+'_', nome_comunicacao[1], offset[1], "REAL32")				
 					offset[1] += 4
 					tamanho_total[1] += 4
-				#else:
-				escreve_record_ai(nome_da_variavel, nome_comunicacao[0], offset[0], "REAL32")				
-				offset[0] += 4
-				tamanho_total[0] += 4
+					offset[0] += 4
+					tamanho_total[0] += 4					
+				else:
+					escreve_record_ai(nome_da_variavel, nome_comunicacao[0], offset[0], "REAL32")				
+					offset[0] += 4
+					tamanho_total[0] += 4
 					
 		if tipo_da_variavel == "Int\r\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':
 					escreve_record_ao(nome_da_variavel+'_', nome_comunicacao[1], offset[1], "INT16")				
 					offset[1] += 2
-					tamanho_total[1] += 2					
-				#else:
-				escreve_record_ai(nome_da_variavel, nome_comunicacao[0], offset[0], "INT16")				
-				offset[0] += 2
-				tamanho_total[0] += 2
+					tamanho_total[1] += 2
+					offset[0] += 2
+					tamanho_total[0] += 2					
+				else:
+					escreve_record_ai(nome_da_variavel, nome_comunicacao[0], offset[0], "INT16")				
+					offset[0] += 2
+					tamanho_total[0] += 2
 				
 		if tipo_da_variavel == "Bool\r\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':
 					escreve_record_bo(nome_da_variavel+'_', nome_comunicacao[1], offset[1], numero_bits[1], "BYTE")								
-					numero_bits[1] = numero_bits[1] + 1				
-
+					numero_bits[1] = numero_bits[1] + 1
 					if numero_bits[1] == 8:
 						offset[1] += 1
 						tamanho_total[1] += 1
-						numero_bits[1] = 0					
-				#else:
-				escreve_record_bi(nome_da_variavel, nome_comunicacao[0], offset[0], numero_bits[0], "BYTE")								
-				numero_bits[0] = numero_bits[0] + 1				
+						numero_bits[1] = 0
+						
+					numero_bits[0] = numero_bits[0] + 1				
 
-				if numero_bits[0] == 8:
-					offset[0] += 1
-					tamanho_total[0] += 1
-					numero_bits[0] = 0	
+					if numero_bits[0] == 8:
+						offset[0] += 1
+						tamanho_total[0] += 1
+						numero_bits[0] = 0						
+						
+				else:
+					escreve_record_bi(nome_da_variavel, nome_comunicacao[0], offset[0], numero_bits[0], "BYTE")								
+					numero_bits[0] = numero_bits[0] + 1
+					if numero_bits[0] == 8:
+						offset[0] += 1
+						tamanho_total[0] += 1
+						numero_bits[0] = 0	
 
 		
 	flag_transicao = 0
