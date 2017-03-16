@@ -1,4 +1,4 @@
-0,32,48,64,72,74,
+0,32,48,64,72,120,
 0,16,24,168,170,
 ASPT100_1,A1,Real
 ASPT100_2,A1,Real
@@ -20,18 +20,18 @@ PID_MODE_1,A4,Word
 PID_MODE_2,A4,Word
 PID_MODE_3,A4,Word
 PID_MODE_4,A4,Word
-KP_1,A5,Bool
-KP_2,A5,Bool
-KP_3,A5,Bool
-KP_4,A5,Bool
-TI_1,A5,Bool
-TI_2,A5,Bool
-TI_3,A5,Bool
-TI_4,A5,Bool
-TD_1,A5,Bool
-TD_2,A5,Bool
-TD_3,A5,Bool
-TD_4,A5,Bool
+KP_1,A5,Real
+KP_2,A5,Real
+KP_3,A5,Real
+KP_4,A5,Real
+TI_1,A5,Real
+TI_2,A5,Real
+TI_3,A5,Real
+TI_4,A5,Real
+TD_1,A5,Real
+TD_2,A5,Real
+TD_3,A5,Real
+TD_4,A5,Real
 Reset Alarms,A6,Bool
 Emeregency Btn,A6,Bool
 Reset Btn,A6,Bool
