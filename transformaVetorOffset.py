@@ -65,7 +65,9 @@ def escreve_record_ai(nome_da_variavel, PLC_name, offset, _type):
 def escreve_record_bi(nome_da_variavel, PLC_name, bit, offset, _type):
 	INP_field = '"@%s/%d B=%d T=%s"' %(PLC_name, bit, offset, _type)
 	bi_field = '"$(P)$(R)%s"' %(nome_da_variavel)
-	arquivo_saida.write("\nrecord (bi, %s) {\n	field (SCAN, %s)\n	field (DTYP, %s)\n	field (INP, %s)\n}\n" %(bi_field, SCAN_field, DTYP_field, INP_field))
+	ZNAM_field = '"ZERO"'
+	ONAM_field = '"ONE"'
+	arquivo_saida.write("\nrecord (bi, %s) {\n	field (SCAN, %s)\n	field (ZNAM, %s)\n	field (ONAM, %s)\n	field (DTYP, %s)\n	field (INP, %s)\n}\n" %(bi_field, SCAN_field, ZNAM_field, ONAM_field, DTYP_field, INP_field))
 
 def escreve_record_bo(nome_da_variavel, PLC_name, bit, offset, _type):
 	OUT_field = '"@%s/%d B=%d T=%s"' %(PLC_name, bit, offset, _type)
