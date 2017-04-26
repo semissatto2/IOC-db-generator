@@ -19,190 +19,196 @@ record (calc, "$(P)$(R)disconnect-counter") {
 	field (CALC, "(A=0&&B=1)?C+1:C")
 }
 
-record (ai, "$(P)$(R)AS_UTL-WPR-FIT") {
+record (ai, "$(P)$(R)AS_UTL-CAR-PIT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/0 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_UTL-WPR-PIT") {
+record (ai, "$(P)$(R)AS_UTL-WPR-FIT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/4 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_UTL-WPR-TT") {
+record (ai, "$(P)$(R)AS_UTL-WPR-PIT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/8 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_UTL-WRT-FIT") {
+record (ai, "$(P)$(R)AS_UTL-WPR-TT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/12 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_UTL-WRT-PIT") {
+record (ai, "$(P)$(R)AS_UTL-WRT-FIT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/16 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_UTL-WRT-TT") {
+record (ai, "$(P)$(R)AS_UTL-WRT-PIT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/20 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-XBPM1-TT") {
+record (ai, "$(P)$(R)AS_UTL-WRT-TT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/24 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-XBPM1-FIT") {
+record (ai, "$(P)$(R)AS_DEV-XBPM1-TT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/28 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-XBPM1-TT1") {
+record (ai, "$(P)$(R)AS_DEV-XBPM1-FIT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/32 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-XBPM1-TT2") {
+record (ai, "$(P)$(R)AS_DEV-XBPM1-TT1") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/36 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-XBPM1-TT3") {
+record (ai, "$(P)$(R)AS_DEV-XBPM1-TT2") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/40 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-XBPM1-TT4") {
+record (ai, "$(P)$(R)AS_DEV-XBPM1-TT3") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/44 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-XBPM2-TT") {
+record (ai, "$(P)$(R)AS_DEV-XBPM1-TT4") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/48 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-XBPM2-FIT") {
+record (ai, "$(P)$(R)AS_DEV-XBPM2-TT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/52 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-XBPM2-TT1") {
+record (ai, "$(P)$(R)AS_DEV-XBPM2-FIT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/56 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-XBPM2-TT2") {
+record (ai, "$(P)$(R)AS_DEV-XBPM2-TT1") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/60 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-XBPM2-TT3") {
+record (ai, "$(P)$(R)AS_DEV-XBPM2-TT2") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/64 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-XBPM2-TT4") {
+record (ai, "$(P)$(R)AS_DEV-XBPM2-TT3") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/68 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-MSK-TT") {
+record (ai, "$(P)$(R)AS_DEV-XBPM2-TT4") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/72 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-MSK-FIT") {
+record (ai, "$(P)$(R)AS_DEV-MSK-TT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/76 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-MSK-TT1") {
+record (ai, "$(P)$(R)AS_DEV-MSK-FIT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/80 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-MSK-TT2") {
+record (ai, "$(P)$(R)AS_DEV-MSK-TT1") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/84 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-MSK-TT3") {
+record (ai, "$(P)$(R)AS_DEV-MSK-TT2") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/88 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-MSK-TT4") {
+record (ai, "$(P)$(R)AS_DEV-MSK-TT3") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/92 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-SLITS-TT") {
+record (ai, "$(P)$(R)AS_DEV-MSK-TT4") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/96 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-SLITS-FIT") {
+record (ai, "$(P)$(R)AS_DEV-SLITS-TT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/100 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-SLITS-TT1") {
+record (ai, "$(P)$(R)AS_DEV-SLITS-FIT") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/104 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-SLITS-TT2") {
+record (ai, "$(P)$(R)AS_DEV-SLITS-TT1") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/108 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-SLITS-TT3") {
+record (ai, "$(P)$(R)AS_DEV-SLITS-TT2") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/112 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-SLITS-TT4") {
+record (ai, "$(P)$(R)AS_DEV-SLITS-TT3") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/116 T=REAL32")
 }
 
-record (ai, "$(P)$(R)AS_DEV-PS-TT1") {
+record (ai, "$(P)$(R)AS_DEV-SLITS-TT4") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/120 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AS_DEV-PS-TT1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/124 T=REAL32")
 }
 
 record (bi, "$(P)$(R)I_MP(S13)") {
