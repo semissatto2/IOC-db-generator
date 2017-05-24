@@ -109,19 +109,19 @@ record (ai, "$(P)$(R)Umidade_Retorno") {
 	field (INP, "@Testsystem:0/56 T=REAL32")
 }
 
-record (ai, "$(P)$(R)Pressões_Filtro_Fino") {
+record (ai, "$(P)$(R)Pressoes_Filtro_Fino") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/60 T=REAL32")
 }
 
-record (ai, "$(P)$(R)Pressões_Filtro_Grosso") {
+record (ai, "$(P)$(R)Pressoes_Filtro_Grosso") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/64 T=REAL32")
 }
 
-record (ai, "$(P)$(R)Pressões_CP") {
+record (ai, "$(P)$(R)Pressoes_CP") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/68 T=REAL32")
@@ -501,5 +501,11 @@ record (bo, "$(P)$(R)Emergencia_W") {
 record (bo, "$(P)$(R)Auto_mode_W") {
 	field (DTYP, "S7plc")
 	field (OUT, "@Testsystem_write:0/45 B=2 T=BYTE")
+	field (PINI, "YES")
+}
+
+record (bo, "$(P)$(R)Manual_mode_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem_write:0/45 B=3 T=BYTE")
 	field (PINI, "YES")
 }
