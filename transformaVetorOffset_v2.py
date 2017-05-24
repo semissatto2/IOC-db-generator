@@ -72,7 +72,7 @@ def escreve_record_bi(nome_da_variavel, PLC_name, bit, offset, _type):
 def escreve_record_bo(nome_da_variavel, PLC_name, bit, offset, _type):
 	OUT_field = '"@%s/%d B=%d T=%s"' %(PLC_name, bit, offset, _type)
 	bo_field = '"$(P)$(R)%s"' %(nome_da_variavel)
-	PINI_field = '"YES"'
+	PINI_field = '"NO"'
 	arquivo_saida.write("\nrecord (bo, %s) {\n	field (DTYP, %s)\n	field (OUT, %s)\n	field (PINI, %s)\n}\n" %(bo_field, DTYP_field, OUT_field, PINI_field))	
 
 def escreve_record_ao(nome_da_variavel, PLC_name, offset, _type):
