@@ -15,9 +15,9 @@ Umidade_TAE,AI,Real
 Umidade_Serpentina,AI,Real
 Umidade_Cabana,AI,Real
 Umidade_Retorno,AI,Real
-Pressões_Filtro_Fino,AI,Real
-Pressões_Filtro_Grosso,AI,Real
-Pressões_CP,AI,Real
+Pressoes_Filtro_Fino,AI,Real
+Pressoes_Filtro_Grosso,AI,Real
+Pressoes_CP,AI,Real
 Valvula_H2O_retorno,AI,Real
 Damper1_Retorno,AI,Real
 Damper2_Retorno,AI,Real
