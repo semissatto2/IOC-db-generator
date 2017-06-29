@@ -1,0 +1,302 @@
+record (bi, "$(P)$(R)status") {
+	field (DTYP, "S7plc stat")
+	field (INP, "@Testsystem:0")
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "disconnected")
+	field (ONAM, "connected")
+	field (ZSV, "MAJOR")
+	field(FLNK, "$(P)$(R)status-counter")
+}
+record (calc, "$(P)$(R)status-counter") {
+	field (INPA, "$(P)$(R)status-counter")
+	field (CALC, "A+1")
+	field (FLNK, "$(P)$(R)disconnect-counter")
+}
+record (calc, "$(P)$(R)disconnect-counter") {
+	field (INPA, "$(P)$(R)status")
+	field (INPB, "$(P)$(R)disconnect-counter.LA")
+	field (INPC, "$(P)$(R)disconnect-counter")
+	field (CALC, "(A=0&&B=1)?C+1:C")
+}
+
+record (ai, "$(P)$(R)PS_Ciclos") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/0 T=REAL32")
+}
+
+record (ai, "$(P)$(R)GS_Ciclos") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/4 T=REAL32")
+}
+
+record (ai, "$(P)$(R)ActPosition") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/8 T=REAL32")
+}
+
+record (bi, "$(P)$(R)PS_ABERTO") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/12 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)PS_ABERTO_ST") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/12 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)PS_FECHADO") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/12 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)PS_FECHADO_ST") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/12 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GS_ABERTO") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/12 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GS_ABERTO_ST") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/12 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GS_FECHADO") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/12 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GS_FECHADO_ST") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/12 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)PS_FEEDBACK") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/13 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)PS_FEEDBACK_ST") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/13 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GS_FEEDBACK") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/13 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GS_FEEDBACK_ST") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/13 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)PS_VALVE") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/13 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)PS_VALVE_ST") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/13 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GS_VALVE") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/13 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)GS_VALVE_ST") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/13 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_KPF_EMER") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/14 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_EMER_1") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/14 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_EMER_1_ST") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/14 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_EMER_2") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/14 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_EMER_2_ST") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/14 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_CORT_INT") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/14 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_CORT_INT_ST") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/14 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_DOOR_1_FS") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/14 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_DOOR_1_FS_ST") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/15 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_DOOR_2_FS") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/15 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_DOOR_2_FS_ST") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/15 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_SEARCH_BTN_1") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/15 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_SEARCH_BTN_1_ST") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/15 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_SEARCH_BTN_2") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/15 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_SEARCH_BTN_2_ST") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/15 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_SERVO_ACQREQ") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/15 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)CO_SERVO_ERROR") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/16 B=0 T=BYTE")
+}
