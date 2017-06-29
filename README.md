@@ -5,7 +5,7 @@ ___
 	
 	
 	Execução:
-	$python transformaVetorOffset.py <arquivoEntrada.csv> <example.db>
+	$ db-generator.py <arquivoEntrada.csv> <example.db>
 	
 	
 	Guilherme Teixeira Semissatto - LNLS - 07/02/2017 - guilherme.semissatto@lnls.br
