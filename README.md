@@ -4,9 +4,11 @@ ___
 	O código também imprime (no terminal) o tamanho total do DataBlock
 ___
 	Padrão de arquivo.csv:
-	OffsetStructLeitura1, OffsetStructLeitura2, OffsetStructLeitura3,
-	OffsetStructEscrita1, OffsetStructEscrita2, OffsetStructEscrita3,
+	OffsetStructLeitura1, OffsetStructLeitura2, OffsetStructLeitura3, ...
+	OffsetStructEscrita1, OffsetStructEscrita2, OffsetStructEscrita3, ...
 	nomePV,categoriaPV,tipoVariavel
+	...
+	
 	
 	OBS.:
 	Os offsets são adquiridos a partir do DataBlock do TIA Portal
