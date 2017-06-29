@@ -17,7 +17,7 @@ ___
 	Acessar csv_files/ para referências
 ___	
 	Execução:
-	$ db-generator.py <arquivoEntrada.csv> <arquivoSaida.db>
+	$ python db-generator.py <arquivoEntrada.csv> <arquivoSaida.db>
 	
 
 	
