@@ -114,6 +114,7 @@ for line in arquivo_entrada:
                                                                 '''
 			#else:
 			numero_bits[0] = 0
+			print (int(vetorOffset[indiceVetorOffset]))
 			offset[0] =  int(vetorOffset[indiceVetorOffset])
 			#print (offset[porta])	# Debugg
 			tamanho_total[0] = offset[0]
