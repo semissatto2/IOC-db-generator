@@ -1,0 +1,672 @@
+record (bi, "$(P)$(R)status") {
+	field (DTYP, "S7plc stat")
+	field (INP, "@Testsystem:0")
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "disconnected")
+	field (ONAM, "connected")
+	field (ZSV, "MAJOR")
+	field(FLNK, "$(P)$(R)status-counter")
+}
+record (calc, "$(P)$(R)status-counter") {
+	field (INPA, "$(P)$(R)status-counter")
+	field (CALC, "A+1")
+	field (FLNK, "$(P)$(R)disconnect-counter")
+}
+record (calc, "$(P)$(R)disconnect-counter") {
+	field (INPA, "$(P)$(R)status")
+	field (INPB, "$(P)$(R)disconnect-counter.LA")
+	field (INPC, "$(P)$(R)disconnect-counter")
+	field (CALC, "(A=0&&B=1)?C+1:C")
+}
+
+record (ai, "$(P)$(R)ASTTR1_mbar") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/0 T=REAL32")
+}
+
+record (ai, "$(P)$(R)ASTTR2_mbar") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/4 T=REAL32")
+}
+
+record (ai, "$(P)$(R)ASPTR_mbar") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/8 T=REAL32")
+}
+
+record (ai, "$(P)$(R)HMI_SpeedUHV_Stop_FP") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/12 T=REAL32")
+}
+
+record (ai, "$(P)$(R)UHV_Speed_Normalize") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/16 T=REAL32")
+}
+
+record (ai, "$(P)$(R)UHV_Speed_Conv") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/20 T=REAL32")
+}
+
+record (ai, "$(P)$(R)HMI_Pressure_Start_UHV_PTR90") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/24 T=REAL32")
+}
+
+record (ai, "$(P)$(R)ASPT100_Real_1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/28 T=REAL32")
+}
+
+record (ai, "$(P)$(R)ASPT100_Real_2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/32 T=REAL32")
+}
+
+record (ai, "$(P)$(R)ASPT100_Real_3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/36 T=REAL32")
+}
+
+record (ai, "$(P)$(R)ASPT100_Real_4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/40 T=REAL32")
+}
+
+record (ai, "$(P)$(R)ASPT100_Real_5") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/44 T=REAL32")
+}
+
+record (ai, "$(P)$(R)ASPT100_Real_6") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/48 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SPBB1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/52 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SPBB2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/56 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SPBB3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/60 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SPBB4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/64 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SPBB5") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/68 T=REAL32")
+}
+
+record (ai, "$(P)$(R)SPBB6") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/72 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AOBB_Percent_1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/76 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AOBB_Percent_2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/80 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AOBB_Percent_3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/84 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AOBB_Percent_4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/88 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AOBB_Percent_5") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/92 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AOBB_Percent_6") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/96 T=REAL32")
+}
+
+record (ai, "$(P)$(R)HMI_SpeedUHV_Stop_FP_1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/100 T=REAL32")
+}
+
+record (ai, "$(P)$(R)HMI_Pressure_Start_UHV_PTR91") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/104 T=REAL32")
+}
+
+record (ai, "$(P)$(R)AV1_Cycle_Count") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/108 T=INT16")
+}
+
+record (ai, "$(P)$(R)AV2_Cycle_Count") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/110 T=INT16")
+}
+
+record (ai, "$(P)$(R)AV3_Cycle_Count") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/112 T=INT16")
+}
+
+record (ai, "$(P)$(R)GV_Cycle_Count") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/114 T=INT16")
+}
+
+record (ai, "$(P)$(R)PID_MODE_1") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/124 T=WORD")
+}
+
+record (ai, "$(P)$(R)PID_MODE_2") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/126 T=WORD")
+}
+
+record (ai, "$(P)$(R)PID_MODE_3") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/128 T=WORD")
+}
+
+record (ai, "$(P)$(R)PID_MODE_4") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/130 T=WORD")
+}
+
+record (ai, "$(P)$(R)PID_MODE_5") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/132 T=WORD")
+}
+
+record (ai, "$(P)$(R)PID_MODE_6") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/134 T=WORD")
+}
+
+record (ai, "$(P)$(R)HMI_AV1_Cycle_Count") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/136 T=INT16")
+}
+
+record (ai, "$(P)$(R)HMI_AV3_Cycle_Count") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/138 T=INT16")
+}
+
+record (ai, "$(P)$(R)HMI_NS_UHV_Pump") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/140 T=INT16")
+}
+
+record (ai, "$(P)$(R)HMI_AV2_Cycle_Count") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/142 T=INT16")
+}
+
+record (ai, "$(P)$(R)HMI_GV_Cycle_Count") {
+	field (SCAN, "I/O Intr")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/144 T=INT16")
+}
+
+record (bi, "$(P)$(R)MODE_ACT_1") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/146 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)MODE_ACT_2") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/146 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)MODE_ACT_3") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/146 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)MODE_ACT_4") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/146 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)MODE_ACT_5") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/146 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)MODE_ACT_6") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/146 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)Act_AutoTuning_1") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/146 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)Act_AutoTuning_2") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/146 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)Act_AutoTuning_3") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/147 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)Act_AutoTuning_4") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/147 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)Act_AutoTuning_5") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/147 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)Act_AutoTuning_6") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/147 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_Start1stPumping") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/147 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_VCC_RGA") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/147 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_Start_UHV_Pump") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/147 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_Off_TTR_1") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/147 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_Heat_UHV_Pump") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/148 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_StandBy_UHV_Pump") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/148 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_Start_Fore_Pump") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/148 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_Partial_Vent") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/148 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_Stop_Fore_Pump") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/148 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_ControlX3_UHV_Pump") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/148 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_ControlMB_UHV_Pump") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/148 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_ACK_Monitoring_status") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/148 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_AV1SoftStatus") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/149 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_AV2SoftStatus") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/149 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_AV3SoftStatus") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/149 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_Off_PTR") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/149 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_AV1_Close") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/149 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_AV2_Close") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/149 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_AV3_Close") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/149 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_Vent_UHV_Pump") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/149 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_GV_Close") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/150 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_PartialVentilation") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/150 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_PartialPumping") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/150 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_TotalVentilation") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/150 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_AV1C1") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/150 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_AV1C2") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/150 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_AV2C1") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/150 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_AV2C2") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/150 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_AV3C1") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/151 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_AV3C2") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/151 B=1 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_Off_TTR_2") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/151 B=2 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_VCCTTR2") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/151 B=3 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_VCCTTR1") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/151 B=4 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_VCCPTR") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/151 B=5 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_VV_Close") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/151 B=6 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_GVC1") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/151 B=7 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_GVC2") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/152 B=0 T=BYTE")
+}
+
+record (bi, "$(P)$(R)HMI_VV_Open") {
+	field (SCAN, "I/O Intr")
+	field (ZNAM, "ZERO")
+	field (ONAM, "ONE")
+	field (DTYP, "S7plc")
+	field (INP, "@Testsystem:0/152 B=1 T=BYTE")
+}
