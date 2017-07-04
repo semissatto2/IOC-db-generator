@@ -184,25 +184,25 @@ record (ai, "$(P)$(R)HMI_Pressure_Start_UHV_PTR91") {
 record (ai, "$(P)$(R)AV1_Cycle_Count") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
-	field (INP, "@Testsystem:0/108 T=INT16")
+	field (INP, "@Testsystem:0/108 T=LONG")
 }
 
 record (ai, "$(P)$(R)AV2_Cycle_Count") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
-	field (INP, "@Testsystem:0/110 T=INT16")
+	field (INP, "@Testsystem:0/112 T=LONG")
 }
 
 record (ai, "$(P)$(R)AV3_Cycle_Count") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
-	field (INP, "@Testsystem:0/112 T=INT16")
+	field (INP, "@Testsystem:0/116 T=LONG")
 }
 
 record (ai, "$(P)$(R)GV_Cycle_Count") {
 	field (SCAN, "I/O Intr")
 	field (DTYP, "S7plc")
-	field (INP, "@Testsystem:0/114 T=INT16")
+	field (INP, "@Testsystem:0/120 T=LONG")
 }
 
 record (ai, "$(P)$(R)PID_MODE_1") {
@@ -669,4 +669,326 @@ record (bi, "$(P)$(R)HMI_VV_Open") {
 	field (ONAM, "ONE")
 	field (DTYP, "S7plc")
 	field (INP, "@Testsystem:0/152 B=1 T=BYTE")
+}
+
+record (ao, "$(P)$(R)HMI_SpeedUHV_Stop_FP_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/0 T=REAL32")
+}
+
+record (ao, "$(P)$(R)HMI_Pressure_Start_UHV_PTR90_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/4 T=REAL32")
+}
+
+record (ao, "$(P)$(R)SPBB1_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/8 T=REAL32")
+}
+
+record (ao, "$(P)$(R)SPBB2_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/12 T=REAL32")
+}
+
+record (ao, "$(P)$(R)SPBB3_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/16 T=REAL32")
+}
+
+record (ao, "$(P)$(R)SPBB4_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/20 T=REAL32")
+}
+
+record (ao, "$(P)$(R)SPBB5_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/24 T=REAL32")
+}
+
+record (ao, "$(P)$(R)SPBB6_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/28 T=REAL32")
+}
+
+record (ao, "$(P)$(R)AOBB_Percent_1_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/32 T=REAL32")
+}
+
+record (ao, "$(P)$(R)AOBB_Percent_2_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/36 T=REAL32")
+}
+
+record (ao, "$(P)$(R)AOBB_Percent_3_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/40 T=REAL32")
+}
+
+record (ao, "$(P)$(R)AOBB_Percent_4_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/44 T=REAL32")
+}
+
+record (ao, "$(P)$(R)AOBB_Percent_5_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/48 T=REAL32")
+}
+
+record (ao, "$(P)$(R)AOBB_Percent_6_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/52 T=REAL32")
+}
+
+record (ao, "$(P)$(R)PID_MODE_1_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/56 T=WORD")
+}
+
+record (ao, "$(P)$(R)PID_MODE_2_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/58 T=WORD")
+}
+
+record (ao, "$(P)$(R)PID_MODE_3_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/60 T=WORD")
+}
+
+record (ao, "$(P)$(R)PID_MODE_4_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/62 T=WORD")
+}
+
+record (ao, "$(P)$(R)PID_MODE_5_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/64 T=WORD")
+}
+
+record (ao, "$(P)$(R)PID_MODE_6_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/66 T=WORD")
+}
+
+record (ao, "$(P)$(R)HMI_NS_UHV_Pump_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/68 T=INT16")
+}
+
+record (bo, "$(P)$(R)MODE_ACT_1_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/70 B=0 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)MODE_ACT_2_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/70 B=1 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)MODE_ACT_3_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/70 B=2 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)MODE_ACT_4_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/70 B=3 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)MODE_ACT_5_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/70 B=4 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)MODE_ACT_6_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/70 B=5 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)Act_AutoTuning_1_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/70 B=6 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)Act_AutoTuning_2_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/70 B=7 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)Act_AutoTuning_3_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/71 B=0 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)Act_AutoTuning_4_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/71 B=1 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)Act_AutoTuning_5_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/71 B=2 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)Act_AutoTuning_6_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/71 B=3 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_Start1stPumping_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/71 B=4 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_VCC_RGA_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/71 B=5 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_Start_UHV_Pump_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/71 B=6 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_Off_TTR_1_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/71 B=7 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_Heat_UHV_Pump_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/72 B=0 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_StandBy_UHV_Pump_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/72 B=1 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_Start_Fore_Pump_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/72 B=2 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_Partial_Vent_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/72 B=3 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_Stop_Fore_Pump_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/72 B=4 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_ControlX3_UHV_Pump_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/72 B=5 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_ControlMB_UHV_Pump_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/72 B=6 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_ACK_Monitoring_status_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/72 B=7 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_Off_PTR_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/73 B=0 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_Vent_UHV_Pump_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/73 B=1 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_GV_Close_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/73 B=2 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_PartialVentilation_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/73 B=3 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_PartialPumping_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/73 B=4 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_TotalVentilation_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/73 B=5 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_Off_TTR_2_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/73 B=6 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_VCCTTR2_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/73 B=7 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_VCCTTR1_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/74 B=0 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_VCCPTR_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/74 B=1 T=BYTE")
+	field (PINI, "NO")
+}
+
+record (bo, "$(P)$(R)HMI_VV_Close_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/74 B=2 T=BYTE")
+	field (PINI, "NO")
+}
+
+
+record (bo, "$(P)$(R)HMI_VV_Open_W") {
+	field (DTYP, "S7plc")
+	field (OUT, "@Testsystem:0/74 B=3 T=BYTE")
+	field (PINI, "NO")
 }
