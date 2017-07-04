@@ -24,3 +24,8 @@ ___
 	
 	Guilherme Teixeira Semissatto - LNLS - 07/02/2017 - guilherme.semissatto@lnls.br
 ___
+
+
+Próximos passos:
+->Quando faz uso de variáveis de escrita, a última variável deve ser feita à mão
+->Incorporar leitura de tipo DInt
