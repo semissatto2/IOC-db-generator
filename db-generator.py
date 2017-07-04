@@ -105,20 +105,19 @@ for line in arquivo_entrada:
 		if cat_da_variavel_atual != cat_da_variavel_antiga and cat_da_variavel_antiga != "":
 			#print "Houve transicao de categoria"	# Debugg
 			if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':
-                                                                '''
+                                                                
 				numero_bits[1] = 0
 				offset[1] =  int(vetorOffset_write[indiceVetorOffset_write])
 				#print (offset[porta])	# Debugg
 				tamanho_total[1] = offset[1]
 				indiceVetorOffset_write += 1
-                                                                '''
-			#else:
-			numero_bits[0] = 0
-			print (indiceVetorOffset)
-			offset[0] =  int(vetorOffset[indiceVetorOffset])
-			#print (offset[porta])	# Debugg
-			tamanho_total[0] = offset[0]
-			indiceVetorOffset += 1				
+                                                                
+			else:
+				numero_bits[0] = 0
+				offset[0] =  int(vetorOffset[indiceVetorOffset])
+				#print (offset[porta])	# Debugg
+				tamanho_total[0] = offset[0]
+				indiceVetorOffset += 1				
 	
 		if tipo_da_variavel == "Word\r\n":
 				if nome_da_variavel[len(nome_da_variavel)-2:] == '_W':
